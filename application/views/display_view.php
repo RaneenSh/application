@@ -12,26 +12,28 @@
 	</head>
 <body>
 <div>
+<form action="blog_model/delete" method="post">
 <table>
 <th><tr><td>id</td><td>title</td><td>body</td></tr></th>
 <?php
 if($records) {
       foreach ($records->result_array() as $row) {
    echo '<tr>
-        <td>' . $row['id']  . '</td>
+        <td><input type="checkbox" name="list[]" >' . $row['id']  . '</td>
         <td>' . $row['title'] . '</td>
         <td>' . $row['body'] . ' </td>
     </tr>';
 	  }
 }
-
-?>		
-
-
-</table>
+?>
+	<input type="submit" name = "delete_submit" value = "delete"><br>
+	</form>		
 <form action="index" method="post">
 	<input type="submit" name = "submit" value = "back"><br>
 	</form>
+
+</table>
+
 
 
 

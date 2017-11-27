@@ -25,5 +25,15 @@
 			$query = $this->db->get();
 			return $query;
 		}
+		function delete(){
+			$checked= $_POST['list'];
+			if(empty($checked))
+				echo("You didn't select any data");
+			else{
+				$count = count($checked);
+				echo $count;
+			}
+			
+		}
 	}
 ?>

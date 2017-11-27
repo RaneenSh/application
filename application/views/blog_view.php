@@ -13,7 +13,6 @@
 <body>
 <div>
 <form action="blog/data_submitted" method="post">
-	ID: <input type="text" name="id"><br><br>
 	Title: <input type = "text" name = "title"><br><br>
 	Body: <textarea rows="4" cols="50" name = "body"></textarea><br><br>
 	<input type="submit" name = "submit"><br>

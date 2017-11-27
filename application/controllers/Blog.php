@@ -11,12 +11,10 @@
 			public function data_submitted(){
 				$this->load->view('blog_view');
 				$this->load->library('form_validation');
-				$this->form_validation->set_rules('id', 'id', 'required');
 				$this->form_validation->set_rules('title', 'title', 'required');
 				$this->form_validation->set_rules('body', 'body', 'required');
 				if ($this->form_validation->run() == True) {
 					$data = array(
-					'id' => $this->input->post('id'),
 					'title' => $this->input->post('title'),
 					'body' => $this->input->post('body')
 					);
